@@ -1,6 +1,17 @@
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      templates:
+        - condition:
+            contains:
+              docker.container.name: backend
+          config:
+            - type: container
+              stream: all
+
 filebeat.inputs:
 - type: log
   paths:
-    - /usr/share/filebeat/logs/logstash-tutorial.log 
+    - /usr/share/filebeat/logs/logstash-tutorial.log
 output.logstash:
   hosts: ["logstash:5044"]
