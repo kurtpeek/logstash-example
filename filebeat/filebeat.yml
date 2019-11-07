@@ -3,4 +3,4 @@ filebeat.inputs:
   paths:
     - /usr/share/filebeat/logs/logstash-tutorial.log 
 output.logstash:
-  hosts: ["localhost:5044"]
+  hosts: ["logstash:5044"]
