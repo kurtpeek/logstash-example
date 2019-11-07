@@ -6,3 +6,9 @@ services:
       - logstash
   logstash:
     build: ./logstash
+    depends_on:
+      - elasticsearch
+  elasticsearch:
+    build: ./elasticsearch
+    ports:
+      - "9200:9200"
