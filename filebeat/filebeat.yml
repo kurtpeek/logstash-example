@@ -1,0 +1,6 @@
+filebeat.inputs:
+- type: log
+  paths:
+    - /usr/share/filebeat/logs/logstash-tutorial.log 
+output.logstash:
+  hosts: ["localhost:5044"]

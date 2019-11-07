@@ -1,0 +1,8 @@
+version: '3'
+services:
+  filebeat:
+    build: ./filebeat
+    depends_on:
+      - logstash
+  logstash:
+    build: ./logstash
